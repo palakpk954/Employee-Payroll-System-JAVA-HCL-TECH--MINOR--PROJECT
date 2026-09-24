@@ -5,6 +5,15 @@ A console-based Employee Payroll Management System built in Core Java (JDK 17). 
 
 This project extensively uses core Object-Oriented Programming (OOP) concepts, Generics, Collections, and Exception Handling, fulfilling strict academic requirements without relying on external libraries or frameworks.
 
+## Project Architecture
+The project follows a clean N-Tier Layered Architecture to enforce separation of concerns:
+1. **Model Layer (`payroll.model`)**: Contains the core business entities (`Employee` hierarchy and `SalarySlip`).
+2. **Repository Layer (`payroll.repository`)**: Simulates a database using generic, in-memory collections (`HashMap`) to manage data access and persistence.
+3. **Service Layer (`payroll.service`)**: Encapsulates the business logic (`PayrollProcessor`, `SalarySlipGenerator`), keeping it isolated from UI and data storage.
+4. **Utility Layer (`payroll.util`)**: Provides reusable, generic methods for data processing and safe user input validation.
+5. **UI Layer (`payroll.ui`)**: Handles interactive console menus (`MenuController`), ensuring the presentation logic is distinct from the core application logic.
+6. **Exception Layer (`payroll.exception`)**: Centralizes custom, meaningful error handling for predictable application flow.
+
 ## Features
 - **Add Employee:** Create Full-Time, Part-Time, or Contract employees.
 - **View & Search:** Display all employees or search by unique Employee ID.
